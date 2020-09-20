@@ -1,0 +1,31 @@
+Dica:
+
+- Tenha busca informações para interpretação
+de suporte no browser, pois nem todos 
+conseguem realizar páginas dinâmicas no JS;
+
+- E tenha o servidor eficiente para ter o
+ performance no seu ambiente desenvolvimento;
+
+- JS praticamente é tudo;
+=================================================
+Léxico(Como a linguagem é criada)
+
+-> Case-sensitive;
+-> Comentários;
+-> Declarações;
+-> Literais;
+-> Escape;
+-> Variáveis e Constantes;
+-> Null, undefined, NaN e Infinity;
+-> Objeto global(window,global) e this;
+=================================================
+vantagem JS dentro HTML:
+
+-> Requisição embutido;
+-> Manipulação independente;
+
+E desvantagem:
+
+-> Requisição único arquivo HTML;
+-> Um pouco performatica;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução</title>
+</head>
+<body>
+    <h1>Introdução ao JS</h1>
+    <script>
+        var nome = "Gabriel Soares";
+
+        alert(nome);
+
+        //exemplo obj literal
+        var obj = new Object();
+        
+        obj ={
+            nome:"ze",
+            idade:25
+        };
+
+        //Frase generator
+        var frutas = ['maça','pera','uva'];
+        var index = Math.floor((Math.random() * frutas.length)); 
+        console.log("Fruta selecionado: "+frutas[index]);
+        
+        //Formas variaveis
+        var test=20;// Valor global
+        const pi=3.14; // Imutável
+        let teste;//Recomendável para utilizar em que estão no escopo
+        
+        /*
+          Null - quando eu desejo que seja;
+          Undefined - quando não é desejado pelo usuário;
+          NaN - quando não valor numérico;
+          Infinity - (ex -> 2e308) Valor infinito;
+        */ 
+
+        /*
+         Objeto global - referência ao acesso componentes html do browser;
+            window.alert();
+            this -> representa no contexto atual;
+         */
+    </script>
+</body>
+</html>
