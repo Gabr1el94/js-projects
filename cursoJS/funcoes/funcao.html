@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+
+        // função literal
+        function somar(n1,n2) {
+            //corpo da função
+            return n1 + n2;
+        }
+ 
+        var soma = somar(10,20);
+        console.log('Resultado soma:',soma);
+
+        // função sem nome
+        var teste = function(val){
+
+            console.log('teste anônima',val)
+            //chamar outra função
+            f()
+        }; 
+
+        teste('gabriel')
+
+        teste(function() {
+            console.log('função passada por parâmetro')
+        });
+
+        //=============================================
+        //Escopo Local
+        var x = 0;
+        var y;
+         function mostraX() {
+             var x = 10;//escopo global
+             var y=20;
+             console.log("mostra x:", x);
+             console.log("mostra y:", y);   
+         }
+
+         mostraX()
+
+         console.log('mostra x fora:',x)
+         console.log('mostra y fora:',y)
+         //=============================================
+         // Podem ser auto-executáveis - IFEE
+         (function init(){
+             'use strict';
+            var isValid = false; 
+            console.log(isValid);
+            
+            // Array por meio arguments
+            function somar(){
+                console.log(arguments);
+                var result;
+                var x = 0;
+                while (arguments[x]) {
+                    result+=arguments[x];
+                    x++;
+                }
+                console.log('resultado: ',result);
+            }
+
+            somar(10,20,50,30);
+         })();
+        //=============================================
+          
+    </script>
+</body>
+</html>

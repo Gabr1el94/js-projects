@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+    <script>
+        //Calcúlo da média e aceitando diversos parametros
+        (function() {
+            'use strict';
+            function calcularMedia() {
+                let result;
+                let x = 0;
+                while(typeof arguments[x] === 'number') {
+                    result += arguments[x];
+                    x++;
+                }
+                return result/arguments.length;
+            }
+            var media1 =calcularMedia(2,3)
+            var media2 =calcularMedia(10,4,7,9,8)
+        })();
+    </script>
+</body>
+</html>
