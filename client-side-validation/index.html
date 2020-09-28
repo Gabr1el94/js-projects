@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form with Validation</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input placeholder="Your Username" 
+                type="text" id="username"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input placeholder="teste@teste.com" 
+                type="email" id="email"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="pass">Password</label>
+                <input placeholder="Your Password" 
+                type="password" id="pass"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="conPass">Confirm Password</label>
+                <input placeholder="Confirm your Password" 
+                type="password" id="conPass"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <button>Submit</button>
+            <script src="js/script.js"></script>
+        </form>
+    </div>
+</body>
+</html>
