@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exec 2</title>
+</head>
+<body>
+    <input type="text" id="txtNome"
+     placeholder="Digite o nome" required>
+     <button onclick="escreve()">Submit</button>
+    <div id="msg">
+
+    </div>
+    <script>
+
+        var txtNome2 = document.querySelector('#txtNome');
+        
+        function escreve(){    
+            var nome = txtNome2.value; 
+            if (nome!== '' && nome !== undefined) {
+                document.querySelector('#msg').innerHTML = 
+            "Bem-vindo, <b>"+ nome +"</b>";   
+            }else{
+                alert('Seu nome é obrigatório!');
+                document.getElementById('txtNome').focus();
+            }
+        }
+    </script>
+</body>
+</html>
