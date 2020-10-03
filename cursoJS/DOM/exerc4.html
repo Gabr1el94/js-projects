@@ -20,6 +20,7 @@
                 <th>Nota 3</th>
                 <th>Nota 4</th>
                 <th>Média</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -30,6 +31,7 @@
                 <td class="aluno-n3">9</td>
                 <td class="aluno-n4">7.5</td>
                 <td class="aluno-m"></td>
+                <td class="aluno-status"></td>
             </tr>
             <tr class="aluno">
                 <td class="aluno-nome">Rey</td>
@@ -38,6 +40,7 @@
                 <td class="aluno-n3">6.5</td>
                 <td class="aluno-n4">7.5</td>
                 <td class="aluno-m"></td>
+                <td class="aluno-status"></td>
             </tr>
             <tr class="aluno">
                 <td class="aluno-nome">Jhon</td>
@@ -46,6 +49,7 @@
                 <td class="aluno-n3">5.5</td>
                 <td class="aluno-n4">8.0</td>
                 <td class="aluno-m"></td>
+                <td class="aluno-status"></td>
             </tr>
         </tbody>
     </table>
@@ -63,7 +67,12 @@
                     var notas = recuperarNumerosDeColunas(tds);  
                     var media = calcularMedia.apply(this, notas);
                     
-                    linhaAluno.querySelector('.aluno-m').textContent = media;
+                    linhaAluno.querySelector('.aluno-m').textContent = media.toFixed(2);
+                    if (media >= 7) {
+                        linhaAluno.querySelector('.aluno-status').textContent = "Aprovado"   
+                    } else {
+                        linhaAluno.querySelector('.aluno-status').textContent = "Reprovado"
+                    }
                     x++;
                 }
                 
