@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo DOM</title>
+</head>
+<body>
+    <main class="cmain" id="idmain">
+        <h2>subtitulo</h2>
+        <p id="pmain">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Placeat quidem consequatur, obcaecati vitae 
+        blanditiis officia totam repellat architecto 
+        doloremque mollitia voluptates.</p>
+    </main>
+
+    <section class="csection" id="idsection">
+        <h2>subtitulo</h2>
+        <p class="cparagrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Placeat quidem consequatur, obcaecati vitae 
+            blanditiis officia totam repellat architecto 
+            doloremque mollitia voluptates.</p>
+        <p class="cparagrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Placeat quidem consequatur, obcaecati vitae 
+            blanditiis officia totam repellat architecto 
+            doloremque mollitia voluptates.</p>
+    </section>
+
+    <script>
+        var dom = document.getElementById('idmain')
+        console.log("basic getElementID: "+dom)
+
+        var paragraph = document.getElementById('pmain').textContent = 'Texto Alterado';
+        console.log("show getElementByID: "+paragraph)
+
+        var cparagrafos = document.getElementsByClassName('cparagrafos')[0].textContent = 'Texto Alterado Apontado';
+        console.log("show one item getElementByClassName: "+cparagrafos)
+
+        var tparagrafos = document.getElementsByTagName('p');
+        console.log("show tags getElementByID: "+tparagrafos)
+
+         //querySelector - one or first Element
+         var valueSelect = document.querySelector('#idmain h2').textContent='Alterado o subtítulo'
+         console.log(valueSelect)
+
+         //querySelectorAll - Collection Element
+         var valueSelectAll = document.querySelectorAll('#idsection p')[1].textContent = 'Atualizado o texto'
+         console.log(valueSelectAll)
+    </script>
+
+</body>
+</html>
