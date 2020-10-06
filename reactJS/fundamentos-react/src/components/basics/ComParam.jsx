@@ -1,5 +1,6 @@
 import React from 'react';
 
+// The proprties are only read
 export default function Param(params){
     return (
         <div id="app">
