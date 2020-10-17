@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - EXEC1</title>
+</head>
+<body>
+    <script>
+        var pessoa1 = {
+            nome:'gabriel',
+            sobrenome:'soares'
+        }
+
+        var pessoa2 = {
+            nome:'kátia',
+            sobrenome:'cilene'
+        }
+
+        var pessoa3 = {
+            nome:'arthur',
+            sobrenome:'paz'
+        }
+
+        var pessoas = [
+                pessoa1,
+                pessoa2,
+                pessoa3
+        ]
+
+        pessoas.forEach(p => {
+            console.log(p.nome +' '+p.sobrenome)
+        });
+
+    </script>
+</body>
+</html>

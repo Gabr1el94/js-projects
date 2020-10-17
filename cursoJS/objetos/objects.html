@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Object</title>
+</head>
+<body>
+    
+
+    <script>
+    /* Obj nativos: Saõ objetos que representa 
+    da mesma linguagem */
+     
+    var teste = new String('Texto de teste')
+    console.log(teste)
+    /*Sintaxe formal e literal*/
+    
+    //formal
+    var obj = new Object()
+    console.log('===================')
+    //literal
+    obj = {"title":"titulo","texto":"Lorem"}
+    console.log(obj)
+    console.log('===================')
+    /* Obj do ambiente de hospedagem - são acrescentados */
+    alert("Hello User!")
+    console.log('===================')
+    /*Construtores*/
+    var constr = new Date(2005,12,19); 
+    console.log('===================')    
+    /* Valor vs. referência*/
+    
+    // valor 
+    var v1 = 2;
+    console.log(v1);
+
+    function mudaV1(v1){
+        var n = v1;
+        console.log(++n);
+    }
+
+    mudaV1(v1);
+
+    console.log('----------')
+
+    // referencia
+    var x = [0];
+    
+    function mudaX(x){
+        var y = x;
+        y.push(2);
+        x.push(3);
+        console.log(y)
+        console.log(x)
+    }
+
+    mudaX(x);
+    console.log('===================')
+
+    /* Obj customizados */
+    
+    // em forma literal
+    function mudaCor(cor){
+        this.cor = cor;
+    }
+    var caneta = {
+        cor: 'red',
+        mudarCor: mudaCor
+    }
+    
+    var caneta2 = {
+        cor: 'white',
+        mudarCor: mudaCor
+    };
+
+    caneta.mudarCor('green');
+    caneta2.mudarCor('black');
+    console.log(caneta)
+    console.log(caneta2)
+
+    // em construtores
+    function Caneta(preco, cor){
+        //private
+        var color = cor || 'black';
+        var preco = preco || 1;
+
+        //public
+        this.mudarCor = function(cor){
+            color = cor;
+        }
+        this.pegaCor = function(){
+            return color;
+        }
+        this.pegaPreco = function(){
+            return preco;
+        }
+    }
+    var teste = new Caneta(5,'red');
+    console.log(teste)
+    </script>
+</body>
+</html>
