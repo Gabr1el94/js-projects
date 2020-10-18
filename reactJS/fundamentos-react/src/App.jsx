@@ -2,6 +2,8 @@ import './App.css';
 
 import React from 'react'
 //import components created
+import ListaProdutos from './components/repeticao/ListProdutos'
+import ListaAlunos from './components/repeticao/ListaAlunos'
 import Primeiro from './components/basics/Primeiro'
 import ComParam from './components/basics/ComParam'
 import Fragmento from './components/basics/Fragmento'
@@ -15,6 +17,14 @@ export default () => (
         <h2>Fundamentos React</h2>
 
         <div className="Cards">
+        
+        <Card title="Repetição Produtos" color="#FF7C61">
+            <ListaProdutos></ListaProdutos>
+        </Card>
+
+        <Card title="Repetição Alunos" color="#FF4C65">
+            <ListaAlunos></ListaAlunos>
+        </Card>
 
         <Card title="Componente Filhos" color="#00C8F8">
             <Familia sobrenome="Soares">  
