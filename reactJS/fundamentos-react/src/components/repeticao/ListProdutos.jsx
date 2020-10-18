@@ -9,7 +9,7 @@ export default (props) => {
             <tr key={produto.id} className={i % 2 === 0 ? 'Par' : 'Impar'}>
                 <td>{produto.id}</td>
                 <td>{produto.nome}</td>
-                <td>R$ {produto.preco.toFixed(2).substring('.',',')}</td>
+                <td>R$ {produto.preco.toFixed(2)}</td>
             </tr>
         );
     });
