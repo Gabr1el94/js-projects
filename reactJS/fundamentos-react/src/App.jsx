@@ -2,6 +2,8 @@ import './App.css';
 
 import React from 'react'
 //import components created
+import ParImpar from './components/condicional/ParImpar'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
 import ListaProdutos from './components/repeticao/ListProdutos'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import Primeiro from './components/basics/Primeiro'
@@ -18,6 +20,12 @@ export default () => (
 
         <div className="Cards">
         
+        <Card title="Condicional" color="#982395">
+            <ParImpar numero={20}></ParImpar>
+            <UsuarioInfo usuario={{nome: 'Gabriel'}}/>
+            <UsuarioInfo usuario={{nome: ''}}/>
+        </Card>
+
         <Card title="Repetição Produtos" color="#FF7C61">
             <ListaProdutos></ListaProdutos>
         </Card>
