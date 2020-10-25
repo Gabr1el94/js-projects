@@ -1,0 +1,15 @@
+.navbar, .navbar-brand {
+    font-size: 1.2rem !important;
+}
+.ml-auto .item{
+    font-weight: bold;
+} 
+
+.nav-link{
+    color: white !important;
+}
+
+.nav-link:hover{
+    color: darkorange!important;
+    text-decoration: underline;
+}

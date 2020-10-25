@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
 
+//Imports Components
+import Header from './Header/Header'
+import Footer from './Footer/Footer'
+import Container from 'react-bootstrap/Container'
 
 export default () => (
-  <div>
-    Hello website
-  </div>
+  <Container fluid>
+    <Header/>
+  </Container>
 );
