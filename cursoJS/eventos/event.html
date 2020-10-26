@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Event</title>
+</head>
+<body>
+
+
+    <button id="btn1" onclick="clicar()">Teste 1</button>
+    <button id="btn2" >Teste 2</button>
+    <button id="btn3" >Teste 3</button>
+    <script>
+        /**O que é evento?
+         * 
+         * É uma executada por algo ou alguém;
+         * Um disparador de evento é o elemento HTML 
+         * que originou de evento;
+         * Na maioria dos casos são padronizados pelo browser;
+         * Event Handler é a função a ser executada quando ocorre o evento;
+         * 
+        */
+        
+        
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+        
+        // DOM nível 0
+        btn2.onclick = clicar;
+        function clicar(){
+            alert('clicou');
+
+            return function(){
+                alert('clicou 2')
+            }
+        }
+
+        // DOM nível 2 - atrelar mais de um evento JS
+
+        btn3.addEventListener('click',function(){
+            alert('clicou com DOM level 2')
+        })
+
+        // Resultado Evento DOM nível 0
+
+        btn3.onclick = function(){
+            alert('olá')
+        }
+        btn3.onclick = function(){
+            alert('olá')
+        }
+
+    </script>
+</body>
+</html>
