@@ -1,14 +1,15 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.css"
 
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
-
 export default () =>{
     return (
-        <Navbar collapseOnSelect fixed="top" expand="lg" variant="dark" bg="dark">
+        <Navbar data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out-cubic" 
+                collapseOnSelect  expand="lg" variant="dark" bg="dark">
             <Navbar.Brand href="#">GSS</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
