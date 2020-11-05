@@ -2,3 +2,10 @@
     height:400px;
     width:100%;
 }
+
+/*Responsive*/
+@media only screen and (max-width:1003px){
+    .carousel-items{
+        height:100%;
+    }       
+}
