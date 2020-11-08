@@ -1,0 +1,50 @@
+.footer{
+    max-width:100%;
+    max-height: 100%;
+    background-color: #343a40;
+    color: white;
+    position: relative;
+}
+
+footer.footer .grid-columns{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .grid-columns > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .grid-columns > div > h4{
+    text-align: left;
+}
+
+footer.footer .grid-columns > .texto > .frase{
+    text-align: justify;
+}
+
+footer.footer .grid-columns > .texto > .autor{
+    text-align: left;
+    font-weight: bold;
+}
+
+footer.footer .endereco {
+    text-align: left !important;
+    font-size: 0.9rem !important;
+}
+
+footer.footer .rights {
+    justify-content: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.social-media {
+    padding: 0 .4rem;
+}

@@ -9,7 +9,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from './Header/Header'
 import HomeCarousel from './Carousel/Carousel'
 import Footer from './Footer/Footer'
-import Container from 'react-bootstrap/Container'
  
 // initialization
 AOS.init();
@@ -18,5 +17,6 @@ export default () => (
   <div className="App">
     <Header />
     <HomeCarousel /> 
+    <Footer />
   </div>
 );
