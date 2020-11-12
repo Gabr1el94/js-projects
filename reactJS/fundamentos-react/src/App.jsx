@@ -2,6 +2,7 @@ import './App.css';
 
 import React from 'react'
 //import components created
+import Mega from './components/mega/Mega'
 import Contador from './components/contador/Contador'
 import Input from './components/formulario/Input'
 import IndiretaPai from './components/comunicacao/InderaPai'
@@ -24,6 +25,10 @@ export default () => (
 
         <div className="Cards">
         
+        <Card title="Contador" color="#B9006E">
+           <Mega/>
+        </Card>
+
         <Card title="Contador" color="#424242">
            <Contador numeroInicial={10} />
         </Card>
