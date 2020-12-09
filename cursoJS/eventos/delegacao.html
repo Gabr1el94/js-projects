@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Delegação</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Delegação de eventos</h1>
+        <ul>
+            <li>lista 1</li>
+            <li>lista 2</li>
+            <li>lista 3</li>
+        </ul>
+    </div>
+    <script>
+        /**
+         * O que é?
+         *  - Técnica que consiste em atrelar o evento
+         *  a um elemento mais alto e verificar quem 
+         *  foi o elemento clicado;
+        */
+
+        var $ul = document.querySelector('ul');
+        var $lis = document.querySelectorAll('li');
+
+        $ul.addEventListener('click', function(e){
+            console.log(this);
+            console.log(e.currentTarget)
+            console.log(e.target)
+            
+            if(e.target.nodeName === "LI"){
+                console.log('clicou na li')
+            }
+        })
+
+        // function logArrayElements(el, index) {
+        //     el.addEventListener('click', function(e){
+        //         e.stopPropagation();
+        //         console.log('clicou na li '+ index)
+        //     })
+        // }
+        // $lis.forEach(logArrayElements);
+    </script>
+</body>
+</html>

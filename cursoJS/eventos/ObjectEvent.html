@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Objeto Event</title>
+</head>
+<body>
+    <script>
+        /**
+         * O que é?
+         *  - Objeto passado por parâmetro para a
+         *  função que foi atrelada nos fornecendo
+         *  várias informações adicionais sobre o
+         *  evento em si.
+        */
+       document.addEventListener('click',function(evt){
+          console.log('clicou no documento') 
+          console.log(evt.currentTarget)
+          console.log(this)
+          console.log(evt.target)
+       })
+    </script>
+</body>
+</html>

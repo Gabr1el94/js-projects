@@ -27,11 +27,12 @@
 
        d1.addEventListener('click', function(){
            console.log('click no d1')
+           e.stopPropagation()
        },true)
 
        d1Span.addEventListener('click', function(){
            console.log('click no d1Span')
-       },true)
+        },true)
 
        document.addEventListener('click', function(){
            console.log('clicou no documento')
