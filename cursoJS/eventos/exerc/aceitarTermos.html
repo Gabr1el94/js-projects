@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Disabled Checkbox</title>
+</head>
+<body>
+    <form action="#">
+        <textarea readonly name="contrato" cols="30" rows="10">
+            Contrato de serviço prestado
+        </textarea>
+        <br>
+        <label for=""><input checked type="checkbox" id="chk">
+            Li e aceito os termos desse contrato
+        </label>
+        <br>
+        <button disabled type="submit" id="btn">Continuar</button>
+    </form>
+    <script>
+        (function(){
+            'use strict';
+            
+            var $btn = document.getElementById('btn');
+            var $chk = document.getElementById('chk');
+
+            toggleBtn();
+
+            chk.addEventListener('change', function(){
+                toggleBtn();
+            })
+
+            function toggleBtn() {
+                $btn.disabled = !$chk.checked;
+            }
+        })();
+    </script>
+</body>
+</html>

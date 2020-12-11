@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Validar Form</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        <label for="txtUser">Usuário:</label>
+            <input type="text" id="txtUser" name="user">
+        <label for="txtPass">Senha:</label>
+            <input type="text" id="txtPass" name="pass">
+        <br/>
+        <button type="submit" id="btn">Logar</button>
+    </form>
+    <script>
+        (function(){
+            'use strict';
+            var $form = document.querySelector('form');
+            var $txtUser = document.getElementById('txtUser');
+            var $txtPass = document.getElementById('txtPass');
+            
+            var $btn = document.getElementById('btn');
+
+            $form.addEventListener('submit', function(e){
+                
+                if (!$txtUser.value || !$txtUser.value) {
+                    alert('campo \"User\" está vázio!')
+                    e.preventDefault();
+                }
+
+                if (!$txtPass.value || !$txtPass.value) {
+                    alert('campo \"Senha\" está vázio!')
+                    e.preventDefault();
+                }
+
+
+            });
+
+
+
+
+        })();
+    </script>
+</body>
+</html>

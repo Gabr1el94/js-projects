@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Validar Form</title>
+</head>
+<body>
+    <textarea id="txtMsg" maxLength="100" cols="30" rows="10"></textarea>
+    
+    Restam <span id="resta"></span> caracteres
+    
+    <script>
+        (function(){
+            'use strict';
+            /**
+             * progressive enhacement
+             * 
+             * Caso JS esteja fora do ar tenta manter 
+             * o sistema funcionando em HTML;
+             * 
+             * */
+
+            var $resta = document.getElementById('resta');
+            var $txtMsg = document.getElementById('txtMsg');
+            var maximo = $txtMsg.maxLength;
+             
+            // $txtMsg.addEventListener('keypress',keypress);
+            // $txtMsg.addEventListener('keyup',keyup);
+            // $txtMsg.addEventListener('keydown',keydown);
+            showCharacterLength(maximo);
+            $txtMsg.addEventListener('input',input);
+
+            // function keypress(e) {
+            //     console.log('keypress:'+this.value)
+            // }
+
+            // function keyup(e) {
+            //     console.log('keyup:'+this.value)
+            // }
+
+            // function keydown(e) {
+            //     console.log('keydown:'+this.value)
+            // }
+
+            function input(e) {
+                var nChar = this.value.length;
+                var charMissings = parseInt(maximo) - parseInt(nChar);
+                showCharacterLength(charMissings );
+            }
+
+            function showCharacterLength(n){
+                $resta.textContent = n;
+            }
+        })();
+    </script>
+</body>
+</html>
