@@ -45,6 +45,15 @@ footer.footer .rights {
     flex-wrap: wrap;
 }
 
+.newsteller p {
+    text-align: justify;
+}
+
 .social-media {
     padding: 0 .4rem;
 }
+
+.follow .social-media:hover{
+    color: gold;
+}
+

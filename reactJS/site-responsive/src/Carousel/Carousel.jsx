@@ -11,7 +11,7 @@ export default () => {
         >
             {slides.map((slide, i) => {
                 return (
-                    <Carousel.Item className="carousel-items" interval={1000}>        
+                    <Carousel.Item key={slide.id} className="carousel-items" interval={1000}>        
                         <img
                         className="d-block w-100"
                         src={slide.image}

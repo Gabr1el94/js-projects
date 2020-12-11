@@ -1,12 +1,15 @@
 import './Footer.css'
 
 import React from 'react'
-import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-import NavbarBrand from 'react-bootstrap/NavbarBrand'
 
-// get our fontawesome imports
-import { faFacebook, faInstagram, faTwitter,faYoutube } from "@fortawesome/free-brands-svg-icons"
+//get Input in the Formulary
+import InputGroup from 'react-bootstrap/InputGroup'
+import FormControl from 'react-bootstrap/FormControl'
+import Button from 'react-bootstrap/Button'
+
+// get any fontawesome imports
+import { faFacebook, faInstagram, faTwitter,faYoutube,faMailchimp } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -14,7 +17,11 @@ export default () =>{
     const datetime = new Date().getFullYear().toString();
     
     return (
-        <footer className="footer">
+        <footer 
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            data-aos-easing="ease-in-out-cubic" 
+            className="footer">
             <Container className="grid-columns">
               <div className="texto">
                   <h4 className="titulo">Reflexão:</h4>
@@ -32,8 +39,21 @@ export default () =>{
                       54720-293<br/> 
                   </address>
               </div>
-              <div className="neteller">
+              <div className="newsteller">
                     <h4>Newsletter:</h4>
+                    <p>Inscreva-se para receber últimas notícias</p>
+                    <InputGroup className="mb-3">
+                        <FormControl
+                        placeholder="teste@test.com.br"
+                        aria-label="teste@test.com.br"
+                        aria-describedby="basic-addon2"
+                        />
+                        <InputGroup.Append>
+                            <Button variant="outline-secondary">
+                                Enter
+                            </Button>
+                        </InputGroup.Append>
+                    </InputGroup>
               </div>
               <div className="follow">
                     <h4>Siga-nos:</h4>
