@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - Strings</title>
+</head>
+<body>
+    
+    <script>
+        /**
+         *Strings possui Métodos e propriedades:
+         * 
+         * Literais
+         * var meuTxt = "Hello world!"
+         * 
+         * Objetos
+         * var meuTxt = new String("Olá Mundo!")
+         * 
+        */
+
+        var teste = "minha string completa"
+        console.log("Length: "+teste.length)
+        console.log("Replace: "+teste.replace('i','I'))
+        console.log("Replace com expressão regular: "+
+                    teste.replace('/i/g','I'))
+        console.log("IndexOf: "+teste.indexOf(' '))
+        console.log("IndexOf Last: "+teste.lastIndexOf(' '))
+        console.log("Slice: "+ teste.slice(5))
+        console.log("Substring: "+teste.substring(5))
+        console.log("Split: "+ teste.split(' '))
+        console.log("Uppercase: "+ teste.toLocaleUpperCase())
+        console.log("Lowercase: "+ teste.toLowerCase())
+    </script>
+</body>
+</html>

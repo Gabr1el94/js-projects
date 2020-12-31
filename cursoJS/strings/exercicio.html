@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+</head>
+<body>
+    <script>
+        var nome = "Daniel Tapias Morales";
+        var nomeFormat = nomeFormatSlice(nome.split(' '));
+        //Split
+        function nomeFormatSlice(nome){
+            return `${nome[2]}, ${nome[0]} ${nome[1]}`
+        }
+
+        console.log("Formato Split:"+nomeFormat);
+
+        //LastIndexOf and Slice
+        function nomeLastSlice(nome){
+            //Get último espaço
+            var posicaoLastSpace = nome.lastIndexOf(' ');
+            if (posicaoLastSpace <= 0) {
+                return nome;
+            }
+
+            var ultimoNome = nome.slice(posicaoLastSpace + 1);
+            var primeiroNome = nome.slice(0, posicaoLastSpace);
+
+            return `${posicaoLastSpace}, ${primeiroNome}`
+
+        }
+
+        console.log(""+nomeLastSlice(nome))
+        
+    </script>
+</body>
+</html>
