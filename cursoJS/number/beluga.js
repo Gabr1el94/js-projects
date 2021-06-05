@@ -11,3 +11,11 @@ function calcularMedia(){
 
     return (total / qtd).toFixed(2);
 }
+
+function sortear(n){
+    var _n = n || 2;
+    var nSorteado = Math.random(n);
+    nSorteado *= _n;
+    nSorteado = Math.floor(nSorteado); 
+    return nSorteado;
+}
