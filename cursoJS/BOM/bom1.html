@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS - BOM</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dolor odit cupiditate similique incidunt commodi dicta magni aut labore ea dolorem fuga, doloremque tempore facilis? Enim minus mollitia beatae suscipit?</p>
+    <script>
+        /**
+         * Propriedades e métodos relativos ao browser;
+         *  O BOM não está descrito nas ECMAScript, mas 
+         *  é bem aceito pelos browsers;
+         * 
+         *  innerHeight/Width -> o tamanho interno do browser;
+         *  outerHeight/Width -> o tamanho do browser incluindo o devtools;
+         *  opener -> referência ao window de quem chamou a página por método open();
+         *  pageXOffset / pageYOffset -> Scroll na horizontal e vertical;
+         *  screenX/Y -> posição da janela em relação ao monitor;
+         *  History -> informações relativas em relações ao histórico da navegação
+         *  Location -> informação da url em que estou visualizando no browser;
+         *  Navigator -> Uma série informações em relação ao acesso da navegação;
+         *  Screen -> É referenta a tela do monitor usuário;
+         *  open() -> abre a nova aba direcionado ao site;
+         *  close() -> fechar a janela;
+         *  scrollTo() ->  Scrollar a página até determinada posição;
+         *  scrollBy() ->  Scrollar em acumulação para posição da página;
+         *  print() -> imprimir;
+        */
+
+        window.addEventListener('load', function () {
+            console.log('load disparado');
+        })
+
+        window.addEventListener('DOMContentLoaded', function () {
+            console.log('DOMContentLoaded disparado');
+        })
+
+        window.addEventListener('resize', function (e) {
+            console.log('resize disparado');
+            console.log(e);
+        })
+        
+        window.addEventListener('scroll', function (e) {
+            console.log('scroll disparado');
+            console.log(e);
+            console.log('scroll Y ', pageYOffset)
+        })
+
+        window.addEventListener('unload', function () {
+            console.log('unload disparado');
+        })
+
+        window.addEventListener('beforeunload', function () {
+            console.log('beforeunload disparado');
+        })
+
+    </script>
+</body>
+</html>
