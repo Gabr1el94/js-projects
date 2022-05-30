@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Titillium Web", Arial, sans-serif;
+}
+body {
+    background-color: #01171b;
+}
+
+svg{
+    display: block;
+    margin: 0 auto;
+}
+
+svg path{
+    fill: #000;
+    stroke: #eee;
+    stroke-width: .25;
+}
+
+svg path:hover{
+    fill: #ffc93c;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.logo{
+    color:#fff;
+    text-align: center;
+    font-size: 5.4rem;
+}
+
+#logo-color{
+    color: #ffc93c;
+}
