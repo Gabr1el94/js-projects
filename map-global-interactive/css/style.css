@@ -18,11 +18,13 @@ svg path{
     stroke-width: .25;
 }
 
+
 svg path:hover{
-    fill: #ffc93c;
+    fill: #d3d6db;
     transition: 0.6s;
     cursor: pointer;
 }
+
 
 .logo{
     color:#fff;
