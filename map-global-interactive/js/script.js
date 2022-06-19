@@ -1,6 +1,6 @@
 var btcAccept = ['SV','CF'];
 var btcBanid = ['DZ','BO','CN','CO','EG','ID','IR','IN','IR','XK','NP','RU','TR','VN'];
-var btcFriendly = ['BR','PY','PA','EE'];
+var btcFriendly = ['CU','US','CA','IL','PT','EE','CH'];
 var elementsPath = document.getElementsByTagName('path');
 
 addEventListener('load', e => {
@@ -25,6 +25,12 @@ function playCountries(type, color) {
         for (let j = 0; j < type.length; j++) {
             if (elementsPath[i].id == type[j]) {
                 elementsPath[i].style.fill = color;
+                elementsPath[i].style.stroke = '#fff';
+                elementsPath[i].style.strokeWidth="2";
+            }else if (elementsPath[i].className.baseVal == type[j] || elementsPath[i].className.animVal == type[j]) {
+                elementsPath[i].style.fill = color;
+                elementsPath[i].style.stroke = '#fff';
+                elementsPath[i].style.strokeWidth="2";
             }
         }
     }
