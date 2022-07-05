@@ -45,29 +45,83 @@ svg path:hover{
     padding:1%;
 }
 
-.container, .typeBTC label{
-    color: antiquewhite;
-    font-weight: bold;
+.radio{
     font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
 }
 
-#cl-option+label{
+label.radio.cl{
     color: #FFC93C;
 }
 
-#am-option+label{
+label.radio.am{
     color: #007FFF;
 }
 
-#bn-option+label{
+label.radio.bn{
     color: #BE3144;
 }
 
-input[type=radio]{
-    position: relative;
-    border: 2px solid #eee;
+.radio span{
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: 1px solid #00aeef;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    margin: 3px 3px 0px 5px;
+}
+
+.radio.cl span{
+    border: 4px solid #FFC93C;
+}
+.radio.am span{
+    border: 4px solid #007FFF;
+}
+.radio.bn span{
+    border: 4px solid #BE3144;
+}
+
+.radio input[type="radio"]{
+    visibility: hidden;
+}
+
+.radio input[type="radio"]{
     margin: 3px 3px 0px 5px;
     height: 28px;
-    width: 1.9rem;
-    background-color: #ddd;
+    width: 2.9rem;
+}
+
+.radio input[type="radio"]:checked ~ span:after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.radio span:after{
+    content: "";
+    height: 20px;
+    width: 20px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+
+.radio.cl span:after{
+    background: #FFC93C;
+}
+.radio.am span:after{
+    background: #007FFF;
+}
+.radio.bn span:after{
+    background: #BE3144;
 }
