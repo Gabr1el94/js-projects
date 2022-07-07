@@ -67,6 +67,11 @@ label.radio.bn{
     color: #BE3144;
 }
 
+label.radio.all{
+    color: #FFF;
+}
+
+
 .radio span{
     height: 28px;
     width: 28px;
@@ -88,6 +93,11 @@ label.radio.bn{
 .radio.bn span{
     border: 4px solid #BE3144;
 }
+
+.radio.all span{
+    border: 4px solid #FFF;
+}
+
 
 .radio input[type="radio"]{
     visibility: hidden;
@@ -124,4 +134,8 @@ label.radio.bn{
 }
 .radio.bn span:after{
     background: #BE3144;
+}
+
+.radio.all span:after{
+    background: #FFF;
 }

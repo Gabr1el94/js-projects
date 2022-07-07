@@ -1432,17 +1432,22 @@
         <div class="typeBTC">
             <label class="radio cl">
                 <input type="radio" id="cl-option" 
-                name="selectOption" value="cl">Curso Legal
+                name="selectOption" onclick="showHidePath(value)" value="cl">Curso Legal
                 <span></span>
             </label>
             <label class="radio am">
                 <input type="radio" id="am-option" 
-                name="selectOption" value="am">Amigável
+                name="selectOption" onclick="showHidePath(value)" value="am">Amigável
                 <span></span>
             </label>
             <label class="radio bn">
                 <input type="radio" id="bn-option" 
-                name="selectOption" value="bn">Banidos
+                name="selectOption" onclick="showHidePath(value)" value="bn">Banidos
+                <span></span>
+            </label>
+            <label class="radio all">
+                <input type="radio" id="all-option" 
+                name="selectOption" onclick="showHidePath(value)" value="all">Todos
                 <span></span>
             </label>
         </div>
