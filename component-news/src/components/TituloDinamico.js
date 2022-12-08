@@ -1,4 +1,4 @@
-class TituloDinamico extends HTMLElements {
+class TituloDinamico extends HTMLElement {
     constructor() {
         super();
 

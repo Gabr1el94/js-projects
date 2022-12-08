@@ -1,4 +1,4 @@
-class CardNews extends HTMLElements {
+class CardNews extends HTMLElement {
     constructor() {
         super();
 
