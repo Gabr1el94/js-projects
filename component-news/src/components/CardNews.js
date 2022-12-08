@@ -20,7 +20,7 @@ class CardNews extends HTMLElement {
 
         const linkTitle = document.createElement("a");
         linkTitle.textContent = this.getAttribute("title");
-        linkTitle.href=this.getAttribute("link");
+        linkTitle.href = this.getAttribute("link");
 
 
         const description = document.createElement("p");
@@ -34,8 +34,8 @@ class CardNews extends HTMLElement {
         cardRight.setAttribute("class", "card__right");
 
         const image = document.createElement("img");
-        image.src= this.getAttribute("photo");
-        image.alt="Foto da notícia";
+        image.src = this.getAttribute("photo");
+        image.alt = "Foto da notícia";
         cardRight.appendChild(image);
 
         componentRoot.appendChild(cardLeft);
@@ -44,7 +44,49 @@ class CardNews extends HTMLElement {
         return componentRoot;
     }
 
-    styles() { }
+    styles() {
+        const style = document.createElement("style");
+        style.textContent = `
+        .card {
+            width: 80%;
+            box-shadow: 9px 9px 27px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 9px 9px 27px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 9px 9px 27px 0px rgba(0, 0, 0, 0.75);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .card__left,
+        .card__right {
+            border: 1px solid blue;
+        }
+        
+        .card__left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10px;
+        }
+        
+        .card__left>a {
+            margin-top: 15px;
+            font-size: 25px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .card__left>p {
+            color: gray;
+        }
+        
+        .card__left>span {
+            font-weight: 300;
+        }
+        `;
+        return style;
+    }
 }
 
 customElements.define('card-news', CardNews);
