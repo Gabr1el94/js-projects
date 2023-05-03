@@ -1,7 +1,7 @@
 //Actions count caracters and words
 
 const input = document.querySelector("#input");
-const counter = document.querySelector("#counter");
+const counter = document.querySelector(".counter");
 const toggleButton = document.querySelector("#toggle");
 
 let mode = "caracters";
@@ -21,7 +21,7 @@ toggleButton.addEventListener("click", () => {
 input.addEventListener("input", () => {
     let count = 0;
 
-    if (mode === "characters") {
+    if (mode === "caracters") {
         count = input.value.length;
         counter.textContent = `${count} caracters(s)`;
     } else {
